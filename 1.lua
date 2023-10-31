@@ -28,7 +28,7 @@ def canhbao():
 
 def exp():
     webbrowser.open(link)
-    print("\033[0;32mĐã mở đường link tải "+nameexploit)
+    print("\033[0;32mĐường link tải "+nameexploit+":\033[0;39m",link)
 
     
                
@@ -175,11 +175,13 @@ if chucnang == "1":
    link = "https://drive.google.com/file/d/1DrMWdBDrp9dQxv6Xm4hktlZ3I_n8drUx/view?usp=drive_link"
    nameexploit = "Fluxus"
    exp()
+   sleep(2.75)
    exit()
 elif chucnang == "2":
    link = "https://drive.google.com/file/d/1ttOUWF2E_vtCNNOlAuGeLIA7rzr5VmFh/view?usp=sharing"
    nameexploit = "CodeX"
    exp()
+   sleep(2.75)
    exit()
 elif chucnang == "3":
    clear()
