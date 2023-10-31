@@ -5,6 +5,7 @@ from time import sleep
 import requests
 import json
 import sys
+import webbrowser
 # Define a function to clear the screen
 def clear():
     if os.name == "nt": # Windows
@@ -25,49 +26,38 @@ def canhbao():
     sleep(3.55)
     clear()
 
-       
-def toolnocf():         
+def exp():
+    webbrowser.open(link)
+    print("\033[0;32mĐã mở đường link tải "+nameexploit)
+
+
+clear()
+print('\033[1;33mLoading Tool')
+sleep(0.55)
+clear()
+print('\033[1;33mLoading Tool.')
+sleep(0.55)
+clear()
+print('\033[1;33mLoading Tool..')
+sleep(0.55)
+clear()
+print('\033[1;33mLoading Tool...')
+sleep(2.25)
+clear()
+
+    
+               
+def main():       
     clear()
     canhbao()
-    print("\033[1;33mChọn game bạn muốn treo")
-    print("\033[1;32m1.\033[1;33m BloxFruits\n\033[1;32m2.\033[1;33m BladeBall\n\033[1;32m3.\033[1;33m King Legacy\n\033[1;32m4.\033[1;33m Anime Fighters\n\033[1;32m5.\033[1;33m Game khác")
-    cplaceid = input("\033[1;36mNhập Lựa Chọn: \033[0;39m")
-    if cplaceid == "1":
-       placeid = "2753915549"
-    elif cplaceid == "2":
-       placeid = "13772394625"
-    elif cplaceid == "3":
-       placeid = "4520749081"
-    elif cplaceid == "4":
-       placeid = "6299805723"
-    elif cplaceid == "5":
-       sleep(0.75)
-       clear()
-       print("\033[1;33mNhập PlaceId của game\n\033[1;31mVD: 2753915549\033[0;39m")
-       placeid = input("\033[1;36mVui lòng nhập: \033[0;39m")
-    else:
-       print("\033[1;31mSai lựa chọn")
-       return # Return from the function if the input is invalid
-    file = open('config_tool_rejoin.txt', 'w')
-    file.write(placeid)
-    file.write("\n")
-    sleep(0.75)
-    clear()
-    roblox_link = "roblox://placeId="
-    print("\033[1;33mNhập thời gian chờ(s)\033[0;39m")
-    print("\033[1;31mKhuyến khích: Nên để trên 60 nếu máy mạnh. Trên 120 nếu máy yếu\033[0;39m")
-    try: # Use a try-except block to catch errors
-        wait = int(input("\033[1;36mVui lòng nhập: \033[0;39m"))
-        file.write(str(wait))
-        file.write("\n")
-        sleep(0.75)
-        clear()
-        print("\033[1;33mNhập tên tài khoản treo \033[0;39m")
-        print("\033[1;31mTên(UserName) không phải DisplayName\033[0;39m")
-        username = input("\033[1;36mVui lòng nhập: \033[0;39m")
-        file.write(username)
-        file.write("\n")
-        file.close()
+    file = open('config_tool_rejoin.txt', 'r')
+    lines = file.readlines()
+    placeid = (lines[0].strip())
+    wait = (int(lines[1].strip()))
+    username = (lines[2].strip())
+    file.close()
+    roblox_link = "roblox://placeid="
+    try:
         user_names = [username]
         url = "https://users.roblox.com/v1/usernames/users"
         payload = json.dumps({"usernames": user_names})
@@ -79,9 +69,8 @@ def toolnocf():
             user_name = user["name"]
             user_ids = [user_id]
         clear()
-    except ValueError: # Handle the error if the input is not an integer
-        print("\033[1;31mVui lòng nhập số nguyên\033[0;39m") 
-        return
+    except:
+        print("\033[1;31mError !!!")
     clear()
     url = "https://presence.roblox.com/v1/presence/users"
     payload = json.dumps({"userIds": user_ids})
@@ -148,4 +137,79 @@ def toolnocf():
                print("\033[1;39m----\033[0;33mTrạng thái\033[0;39m----")
                print("\033[1;33mTrạng thái: \033[0;31mOffline\033[0;39m | \033[0;32mVào lại game...")
                joingame() 
-toolnocf()
+               
+               
+def main0():   
+    clear()
+    canhbao()
+    file = open('config_tool_rejoin.txt', 'w')
+    print("\033[1;33mChọn game bạn muốn treo")
+    print("\033[1;32m1.\033[1;33m BloxFruits\n\033[1;32m2.\033[1;33m BladeBall\n\033[1;32m3.\033[1;33m King Legacy\n\033[1;32m4.\033[1;33m Anime Fighters\n\033[1;32m5.\033[1;33m Game khác")
+    cplaceid = input("\033[1;36mNhập Lựa Chọn: \033[0;39m")
+    if cplaceid == "1":
+       placeid = "2753915549"
+    elif cplaceid == "2":
+       placeid = "13772394625"
+    elif cplaceid == "3":
+       placeid = "4520749081"
+    elif cplaceid == "4":
+       placeid = "6299805723"
+    elif cplaceid == "5":
+       sleep(0.75)
+       clear()
+       print("\033[1;33mNhập PlaceId của game\n\033[1;31mVD: 2753915549\033[0;39m")
+       placeid = input("\033[1;36mVui lòng nhập: \033[0;39m")
+    else:
+       print("\033[1;31mSai lựa chọn")
+       return # Return from the function if the input is invalid
+    clear()
+    roblox_link = "roblox://placeId="
+    print("\033[1;33mNhập thời gian chờ(s)\033[0;39m")
+    print("\033[1;31mKhuyến khích: Nên để trên 60 nếu máy mạnh. Trên 120 nếu máy yếu\033[0;39m")
+    try: # Use a try-except block to catch errors
+        wait = int(input("\033[1;36mVui lòng nhập: \033[0;39m"))
+        sleep(0.75)
+        clear()
+        print("\033[1;33mNhập tên tài khoản treo \033[0;39m")
+        print("\033[1;31mTên(UserName) không phải DisplayName\033[0;39m")
+        username = input("\033[1;36mVui lòng nhập: \033[0;39m")
+    except ValueError: # Handle the error if the input is not an integer
+        print("\033[1;31mVui lòng nhập số nguyên\033[0;39m") 
+        return
+    file.write(placeid)
+    file.write("\n")
+    file.write(str(wait))
+    file.write("\n")
+    file.write(username)
+    sleep(0.75)
+    file.close()
+    main()               
+               
+print("\033[1;32m1.\033[1;33m Tải Fluxus\n\033[1;32m2.\033[1;33m Tải CodeX\n\033[1;32m3.\033[1;33m Vào Tool Rejoin")
+chucnang = input("\033[1;36mNhập Lựa Chọn: \033[0;39m")
+if chucnang == "1":
+   link = "https://drive.google.com/file/d/1DrMWdBDrp9dQxv6Xm4hktlZ3I_n8drUx/view?usp=drive_link"
+   nameexploit = "Fluxus"
+   exp()
+   exit()
+elif chucnang == "2":
+   print("\033[1;31mCodeX không thể sử dụng bây giờ.")
+   sleep(2.25)
+   exit()
+elif chucnang == "3":
+   clear()
+   try:
+         file = open('config_tool_rejoin.txt', 'r')
+         lines = file.readlines()
+         file.close()
+         print("\033[1;33mCó Config đã lưu")
+         print("\033[1;32m1. \033[1;33mDùng\n\033[1;32m2. \033[1;33mKhông dùng")
+         chooseconfig = input("\033[1;36mNhập Lựa Chọn: \033[0;39m")
+         if chooseconfig == "1":
+            clear()
+            sleep(0.75)
+            main()
+         elif chooseconfig == "2":
+           main0()
+   except:
+      main0()
