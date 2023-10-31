@@ -30,21 +30,6 @@ def exp():
     webbrowser.open(link)
     print("\033[0;32mĐã mở đường link tải "+nameexploit)
 
-
-clear()
-print('\033[1;33mLoading Tool')
-sleep(0.55)
-clear()
-print('\033[1;33mLoading Tool.')
-sleep(0.55)
-clear()
-print('\033[1;33mLoading Tool..')
-sleep(0.55)
-clear()
-print('\033[1;33mLoading Tool...')
-sleep(2.25)
-clear()
-
     
                
 def main():       
@@ -161,9 +146,8 @@ def main0():
        placeid = input("\033[1;36mVui lòng nhập: \033[0;39m")
     else:
        print("\033[1;31mSai lựa chọn")
-       return # Return from the function if the input is invalid
+       return
     clear()
-    roblox_link = "roblox://placeId="
     print("\033[1;33mNhập thời gian chờ(s)\033[0;39m")
     print("\033[1;31mKhuyến khích: Nên để trên 60 nếu máy mạnh. Trên 120 nếu máy yếu\033[0;39m")
     try: # Use a try-except block to catch errors
@@ -193,8 +177,9 @@ if chucnang == "1":
    exp()
    exit()
 elif chucnang == "2":
-   print("\033[1;31mCodeX không thể sử dụng bây giờ.")
-   sleep(2.25)
+   link = "https://drive.google.com/file/d/1ttOUWF2E_vtCNNOlAuGeLIA7rzr5VmFh/view?usp=sharing"
+   nameexploit = "CodeX"
+   exp()
    exit()
 elif chucnang == "3":
    clear()
@@ -211,5 +196,10 @@ elif chucnang == "3":
             main()
          elif chooseconfig == "2":
            main0()
+         else:
+            print("\033[1;31mSai lựa chọn") 
    except:
       main0()
+else:
+   print("\033[1;31mSai lựa chọn") 
+    
