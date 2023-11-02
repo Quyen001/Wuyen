@@ -206,16 +206,16 @@ def main0():
     file.close()
     main()
 clear()                          
-print("\033[1;32m1.\033[1;33m Tải Fluxus\n\033[1;32m2.\033[1;33m Tải CodeX\n\033[1;32m3.\033[1;33m Vào Tool Rejoin")
+print("\033[1;32m1.\033[1;33m Tải Fluxus (\033[1;32m Working \033[1;33m)\n\033[1;32m2.\033[1;33m Tải CodeX (\033[1;32m Working \033[1;33m)\n\033[1;32m3.\033[1;33m Vào Tool Rejoin")
 chucnang = input("\033[1;36mNhập Lựa Chọn: \033[0;39m")
 if chucnang == "1":
-   link = "https://drive.google.com/file/d/1DrMWdBDrp9dQxv6Xm4hktlZ3I_n8drUx/view?usp=drive_link"
+   link = "https://drive.google.com/file/d/1V3jUeJlFD0KPysR_VxeuPKTYhEhBMjN7/view?usp=drive_link"
    nameexploit = "Fluxus"
    exp()
    sleep(2.75)
    exit()
 elif chucnang == "2":
-   link = "https://drive.google.com/file/d/1ttOUWF2E_vtCNNOlAuGeLIA7rzr5VmFh/view?usp=sharing"
+   link = "https://drive.google.com/file/d/1MPBxFI6sP9v63_AFYl9H3pPq_-QxYOUS/view?usp=sharing"
    nameexploit = "CodeX"
    exp()
    sleep(2.75)
@@ -240,4 +240,4 @@ elif chucnang == "3":
    except:
       main0()
 else:
-   print("\033[1;31mSai lựa chọn") 
+   print("\033[1;31mSai lựa chọn")
