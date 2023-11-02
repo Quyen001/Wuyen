@@ -28,9 +28,46 @@ def canhbao():
 
 def exp():
     webbrowser.open(link)
-    print("\033[0;32mĐường link tải "+nameexploit+":\033[0;39m",link)
-
-    
+    print("\033[1;33mĐường link tải "+nameexploit+":\033[0;39m",link)
+canhbao()
+sleep(0.75)    
+def nhapkey():
+   print("\033[1;33mLink get key:\033[0;39m https://direct-link.net/1013935/key-tool-roblox")
+   key = input("\033[1;36mNhập Key: \033[0;39m")
+   if key == "ToolWuyen3770543":
+      print("\033[1;32mKey đúng")
+      sleep(0.75)
+   else:
+      print("\033[1;31mKey sai.")
+      sleep(1.25)
+      clear()
+      return nhapkey()
+   file = open('key_tool_rejoin.txt', 'w')
+   file.write(key)
+   file.close()
+   
+def checkkeyfile():
+   file = open('key_tool_rejoin.txt', 'r')
+   lines = file.readlines()
+   key = lines[0].strip()
+   file.close()
+   if key == "ToolWuyen3770543":
+      print("\033[1;32mKey đúng")
+      sleep(0.75)
+      pass
+   else:
+      print("\033[1;31mKey đã hết hạn. Vui lòng lấy key mới")
+      nhapkey()
+      
+clear()      
+try:
+   file = open('key_tool_rejoin.txt', 'r')
+   lines = file.readlines()
+   file.close()
+   checkkeyfile()
+except:
+   nhapkey()
+          
                
 def main():       
     clear()
@@ -167,8 +204,8 @@ def main0():
     file.write(username)
     sleep(0.75)
     file.close()
-    main()               
-               
+    main()
+clear()                          
 print("\033[1;32m1.\033[1;33m Tải Fluxus\n\033[1;32m2.\033[1;33m Tải CodeX\n\033[1;32m3.\033[1;33m Vào Tool Rejoin")
 chucnang = input("\033[1;36mNhập Lựa Chọn: \033[0;39m")
 if chucnang == "1":
@@ -204,4 +241,3 @@ elif chucnang == "3":
       main0()
 else:
    print("\033[1;31mSai lựa chọn") 
-    
