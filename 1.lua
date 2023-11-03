@@ -23,14 +23,11 @@ def clear():
 def canhbao():
     print("\033[1;31mTool beta nếu có lỗi. Hãy Report đến")
     print("\033[1;36mDiscord: \033[1;39mhoangminhlong06")
-    sleep(3.55)
-    clear()
+    print("\033[1;39m-------------------")
 
 def exp():
     webbrowser.open(link)
-    print("\033[1;33mĐường link tải "+nameexploit+":\033[0;39m",link)
-canhbao()
-sleep(0.75)    
+    print("\033[1;33mĐường link tải "+nameexploit+":\033[0;39m",link)  
 def nhapkey():
    print("\033[1;33mLink get key:\033[0;39m https://direct-link.net/1013935/key-tool-roblox")
    key = input("\033[1;36mNhập Key: \033[0;39m")
@@ -45,6 +42,7 @@ def nhapkey():
    file = open('key_tool_rejoin.txt', 'w')
    file.write(key)
    file.close()
+   clear()
    
 def checkkeyfile():
    file = open('key_tool_rejoin.txt', 'r')
@@ -52,14 +50,14 @@ def checkkeyfile():
    key = lines[0].strip()
    file.close()
    if key == "ToolWuyen3770543":
-      print("\033[1;32mKey đúng")
-      sleep(0.75)
+      pass
+      clear()
       pass
    else:
       print("\033[1;31mKey đã hết hạn. Vui lòng lấy key mới")
       nhapkey()
       
-clear()      
+clear()     
 try:
    file = open('key_tool_rejoin.txt', 'r')
    lines = file.readlines()
@@ -71,7 +69,6 @@ except:
                
 def main():       
     clear()
-    canhbao()
     file = open('config_tool_rejoin.txt', 'r')
     lines = file.readlines()
     placeid = (lines[0].strip())
@@ -93,7 +90,6 @@ def main():
         clear()
     except:
         print("\033[1;31mError !!!")
-    clear()
     url = "https://presence.roblox.com/v1/presence/users"
     payload = json.dumps({"userIds": user_ids})
     headers = {"Content-Type": "application/json"}
@@ -124,6 +120,7 @@ def main():
           if so == 1:
            if (user["userPresenceType"]) == 2:
                clear()
+               canhbao()
                print("\033[0;39m----\033[1;33mThông tin\033[0;39m----")
                print("\033[1;33mPlaceId:\033[0;39m", placeid)
                print("\033[1;33mUserName:\033[0;39m", username)
@@ -131,8 +128,10 @@ def main():
                print("\033[1;39m----\033[0;33mTrạng thái\033[0;39m----")
                print("\033[1;33mTrạng thái: \033[0;32mOnline\033[0;39m | \033[0;32mGame đang chạy...")
                so = so+1
+               sleep(wait)
            else:
                clear()
+               canhbao()
                print("\033[1;39m----\033[0;33mThông tin\033[0;39m----")
                print("\033[1;33mPlaceId:\033[0;39m", placeid)
                print("\033[1;33mUserName:\033[0;39m", username)
@@ -144,14 +143,17 @@ def main():
           else:
             if (user["userPresenceType"]) == 2:
                clear()
+               canhbao()
                print("\033[1;39m----\033[0;33mThông tin\033[0;39m----")
                print("\033[1;33mPlaceId:\033[0;39m", placeid)
                print("\033[1;33mUserName:\033[0;39m", username)
                print("\033[1;33mUserId:\033[0;39m", int(user_id))
                print("\033[1;39m----\033[0;33mTrạng thái\033[0;39m----")
                print("\033[1;33mTrạng thái: \033[0;32mOnline\033[0;39m | \033[0;32mGame đang chạy...")
+               sleep(wait)
             else:
                clear()
+               canhbao()
                print("\033[1;39m----\033[0;33mThông tin\033[0;39m----")
                print("\033[1;33mPlaceId:\033[0;39m", placeid)
                print("\033[1;33mUserName:\033[0;39m", username)
@@ -205,7 +207,8 @@ def main0():
     sleep(0.75)
     file.close()
     main()
-clear()                          
+    
+canhbao()                       
 print("\033[1;32m1.\033[1;33m Tải Fluxus (\033[1;32m Working \033[1;33m)\n\033[1;32m2.\033[1;33m Tải CodeX (\033[1;32m Working \033[1;33m)\n\033[1;32m3.\033[1;33m Vào Tool Rejoin")
 chucnang = input("\033[1;36mNhập Lựa Chọn: \033[0;39m")
 if chucnang == "1":
