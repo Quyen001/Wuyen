@@ -29,10 +29,17 @@ def canhbao():
 def exp():
     webbrowser.open(link)
     print("\033[1;33mĐường link tải "+nameexploit+":\033[0;39m",link)  
+    
+
+
 def nhapkey():
-   print("\033[1;33mLink get key:\033[0;39m https://web1s.io/Toolw345678")
+   rutgon = requests.get("https://raw.githubusercontent.com/Quyen001/Wuyen/main/3.lua")
+   rutgon0 = (rutgon.text.strip())
+   print("\033[1;33mLink get key:\033[0;39m "+ rutgon0)
    key = input("\033[1;36mNhập Key: \033[0;39m")
-   if key == "ToolWuyen_90I3uB2H":
+   rkey = requests.get("https://raw.githubusercontent.com/Quyen001/Wuyen/main/2.lua")
+   rkey0 = (rkey.text.strip())
+   if key == rkey0:
       print("\033[1;32mKey đúng")
       sleep(0.75)
    else:
@@ -50,7 +57,9 @@ def checkkeyfile():
    lines = file.readlines()
    key = lines[0].strip()
    file.close()
-   if key == "ToolWuyen_90I3uB2H":
+   rkey = requests.get("https://raw.githubusercontent.com/Quyen001/Wuyen/main/2.lua")
+   rkey0 = (rkey.text.strip())
+   if key == rkey0:
       pass
       clear()
       pass
