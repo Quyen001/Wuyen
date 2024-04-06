@@ -1,1 +1,1 @@
-print("Tải tool mới: https://www.mediafire.com/file/609n2bvcmn841xy/Rejoin.py/file")
+print("Tải tool mới: https://www.mediafire.com/file/q9qypecm6c8xlk3/Rejoin.py/file")
